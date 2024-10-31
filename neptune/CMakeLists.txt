@@ -97,3 +97,44 @@ target_link_libraries(mtlp_node ${catkin_LIBRARIES} utils cgal_utils)
 
 
 
+
+catkin_install_python(PROGRAMS scripts/launch_many_drones_mq.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+
+catkin_install_python(PROGRAMS scripts/benchmark_mtlp.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+
+catkin_install_python(PROGRAMS scripts/benchmark_multi_direct.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+
+catkin_install_python(PROGRAMS scripts/launch_many_drones_mq.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+
+catkin_install_python(PROGRAMS scripts/launch_many_drones.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+
+
+catkin_install_python(PROGRAMS scripts/perfect_tracker.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+
+catkin_install_python(PROGRAMS scripts/auto_commands_together.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+
+
+catkin_install_python(PROGRAMS scripts/auto_commands.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)

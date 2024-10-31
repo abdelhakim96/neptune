@@ -43,7 +43,7 @@ j_max: 5
 a_star_samp_x: 5
 a_star_fraction_voxel_size: 0.20 #\in [0,1] The higher, the bigger the voxel size in A* is(i.e. more prunning)
 
-tetherLength: 40.0 #this should be large because the benchmarked method does not take into account tether length
+tetherLength: 5.0 #this should be large because the benchmarked method does not take into account tether length
 # base_positions: [-6.0, -2.0,
 #                  -3.0, -2.0,
 #                  3.0, -2.0,
@@ -102,26 +102,41 @@ res_plot_traj: 15.0  #Higher --> More resolution when plotting the trajectory
 random_obst: false #if true, obst will be randomly placed based on num_of_static_obst. 
                   #if true, vertice_obst_x and vertice_obst_y will be disregarded
 num_of_static_obst: 0
-num_of_vertices_each_obst: [4, 4, 4, 4, 4, 4, 4, 4, 4]
-vertice_obst_x: [-0.25, -0.25, 0.25, 0.25, 
+num_of_vertices_each_obst: [4, 4, 4, 4, 4, 4, 4, 4, 4,4,4,4,4,4]
+  
+
+vertice_obst_x:  [-0.25, -0.25, 0.25, 0.25, 
                   6.25, 5.75, 5.75,  6.25,  
                   -6.25, -5.75, -5.75,  -6.25,
                   6.25, 5.75, 5.75,  6.25,
                   -6.25, -5.75, -5.75,  -6.25,
                   5.75, 5.75, 6.25, 6.25,
                   -5.75, -5.75, -6.25, -6.25,
-                  -0.25,  0.25, 0.25, -0.25,
-                  -0.25,  0.25, 0.25, -0.25]
+                  -0.25, 0.25, 0.25, -0.25,
+                  -0.25, 0.25, 0.25, -0.25,
+                  -1.5, -1.5, -1.0, -1.0,
+                  3.5, 3.5, 4.0, 4.0,
+                  -4.0, -4.0, -3.5, -3.5,
+                  0.5, 0.5, 1.0, 1.0,
+                  -2.0, -2.0, -1.5, -1.5]
 
-vertice_obst_y: [-0.25,  0.25, 0.25, -0.25, 
+vertice_obst_y:  [-0.25,  0.25, 0.25, -0.25, 
                   6.25, 6.25, 5.75, 5.75, 
                   -6.25, -6.25, -5.75, -5.75, 
                   -6.25, -6.25, -5.75, -5.75, 
                   6.25, 6.25, 5.75, 5.75,
                   -0.25,  0.25, 0.25, -0.25,
                   -0.25,  0.25, 0.25, -0.25,
-                  5.75, 5.75, 6.25, 6.25,
-                  -5.75, -5.75, -6.25, -6.25]       
+                  
+                  # New obstacles
+                  4.0, 4.5, 4.5, 4.0,
+                  -2.5, -2.0, -2.0, -2.5,
+                  2.5, 3.0, 3.0, 2.5,
+                  -5.0, -4.5, -4.5, -5.0,
+                  -1.0, -0.5, -0.5, -1.0]
+
+
+
 
 safe_factor: 0.6
 use_not_reaching_soln: true
