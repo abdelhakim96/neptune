@@ -7,6 +7,7 @@
 
 #include "neptune_ros.hpp"
 #include <ros/callback_queue.h>
+#include <ros/rate.h>
 
 int main(int argc, char **argv)
 {
@@ -29,13 +30,20 @@ int main(int argc, char **argv)
 
   NeptuneRos NeptuneRos(nh1, nh2, nh3);
 
-  ros::AsyncSpinner spinner1(1, &custom_queue1);  // 1 thread for the custom_queue1 // 0 means threads= # of CPU cores
-  ros::AsyncSpinner spinner2(1, &custom_queue2);  // 1 thread for the custom_queue2 // 0 means threads= # of CPU cores
-  ros::AsyncSpinner spinner3(1, &custom_queue3);  // 1 thread for the custom_queue3 // 0 means threads= # of CPU cores
+  ros::AsyncSpinner spinner1(1, &custom_queue1);  // 1 thread for the custom_queue1
+  ros::AsyncSpinner spinner2(1, &custom_queue2);  // 1 thread for the custom_queue2
+  ros::AsyncSpinner spinner3(1, &custom_queue3);  // 1 thread for the custom_queue3
 
   spinner1.start();  // start spinner of the custom queue 1
   spinner2.start();  // start spinner of the custom queue 2
   spinner3.start();  // start spinner of the custom queue 3
+
+  // Set the loop rate to 5 Hz
+  ros::Rate rate(5);
+
+  while (ros::ok()) {
+    rate.sleep();  // Sleep to maintain 5 Hz rate
+  }
 
   ros::waitForShutdown();
   return 0;

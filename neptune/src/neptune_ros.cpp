@@ -1096,7 +1096,7 @@ void NeptuneRos::autoCMD(const ros::TimerEvent& e)
       goal_valid = true;
       nextround:;
     }
-    terminalGoalCB(msg);
+    //terminalGoalCB(msg);
     timer_auto_cmd_.Reset();
   }
 }
