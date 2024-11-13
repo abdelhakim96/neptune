@@ -7,11 +7,11 @@ Panels:
         - /Global Options1
         - /Grid1
         - /TF1
-        - /PolySafe1
-        - /Path2
+        - /Path4
         - /Marker1
         - /PointStamped1
-        - /Path5
+        - /Path5/Status1
+        - /PointStamped2
       Splitter Ratio: 0.4597315490245819
     Tree Height: 842
   - Class: rviz/Selection
@@ -250,7 +250,7 @@ Visualization Manager:
       Marker Topic: /tether_path
       Name: Marker
       Namespaces:
-        path: true
+        {}
       Queue Size: 100
       Value: true
     - Alpha: 1
@@ -286,6 +286,17 @@ Visualization Manager:
       Shaft Diameter: 0.10000000149011612
       Shaft Length: 0.10000000149011612
       Topic: /nmpc_predicted_trajectory_viz
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Class: rviz/PointStamped
+      Color: 255; 0; 0
+      Enabled: true
+      History Length: 1
+      Name: PointStamped
+      Queue Size: 10
+      Radius: 0.30000001192092896
+      Topic: /entanglement_point
       Unreliable: false
       Value: true
   Enabled: true
@@ -346,5 +357,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1908
-  X: 4448
-  Y: 133
+  X: 2014
+  Y: 49
