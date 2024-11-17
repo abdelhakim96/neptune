@@ -204,7 +204,7 @@ class auto_commands:
 def startNode():
     c = auto_commands()
     #s = rospy.Service("/change_mode",MissionModeChange,c.srvCB)
-    rospy.Subscriber("/firefly1/state", State, c.stateCB, 0)
+    rospy.Subscriber("/firefly1/state1", State, c.stateCB, 0)
     rospy.Subscriber("/firefly2/state", State, c.stateCB, 1)
     rospy.Subscriber("/firefly3/state", State, c.stateCB, 2)
     rospy.Subscriber("/firefly4/state", State, c.stateCB, 3)

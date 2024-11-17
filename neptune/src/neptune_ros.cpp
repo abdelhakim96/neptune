@@ -175,7 +175,7 @@ NeptuneRos::NeptuneRos(ros::NodeHandle nh1, ros::NodeHandle nh2, ros::NodeHandle
   // Subscribers
   sub_goal_ = nh1_.subscribe("term_goal", 1, &NeptuneRos::terminalGoalCB, this);
   sub_mode_ = nh1_.subscribe("mode", 1, &NeptuneRos::modeCB, this);
-  sub_state_ = nh1_.subscribe("state", 1, &NeptuneRos::stateCB, this);
+  sub_state_ = nh1_.subscribe("state1", 1, &NeptuneRos::stateCB, this);
   sub_traj_ = nh1_.subscribe("/trajs", 20, &NeptuneRos::trajCB, this);  // The number is the queue size
   sub_odom_ = nh1_.subscribe("ground_truth/odometry", 1, &NeptuneRos::odomCB, this);
 

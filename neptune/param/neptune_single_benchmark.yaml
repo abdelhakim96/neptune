@@ -50,7 +50,7 @@ tetherLength: 27.0
 #                  6.0, -2.0]
 
 circle_init_bases: false
-base_positions: [-10, 0.5,  #unity sim scene1
+base_positions: [0.0, 0.0,  #unity sim scene1
                 -5.0, -10,
                 10.0, -5.0,
                 5.0, 10.0,

@@ -287,7 +287,7 @@ def startNode():
     c = auto_commands()
     #s = rospy.Service("/change_mode",MissionModeChange,c.srvCB)
     for i in range(0,number_of_robots):
-        rospy.Subscriber("/firefly"+str(i+1)+"/state", State, c.stateCB, i)
+        rospy.Subscriber("/firefly"+str(i+1)+"/state1", State, c.stateCB, i)
         rospy.Subscriber("/firefly"+str(i+1)+"/goalind", PoseStamped, c.goalOneCB, i)
         rospy.Subscriber('/firefly'+str(i+1)+"/"+odom_topic_name, Odometry, c.odomCB, i)
     rospy.Subscriber("/mtlp_log", PoseStamped, c.mtlp_cb)
